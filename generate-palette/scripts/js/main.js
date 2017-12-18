@@ -1,12 +1,13 @@
-/*
-** Generate a color palette starting from a base color 
-** 2017 Andrea Buran [www.andreaburan.com].
+/*!
+** Generate a color palette starting from a base color.
+** https://github.com/ranbureand/colors
+** Licensed MIT © 2017 Andrea Buran [www.andreaburan.com].
 */
 
 var baseColor = [0, 170, 255]; // define the base color in RGB code
 
 var hueIterations = 12, // define the number of hue iterations of the palette
-    lightnessIterations = 4; // define the number of lightness iterations of the palette
+    lightnessIterations = 12; // define the number of lightness iterations of the palette
 
 var hueIncrement = 360/hueIterations, 
     lightnessIncrement = 4;
