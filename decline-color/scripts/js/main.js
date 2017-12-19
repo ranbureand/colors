@@ -1,13 +1,13 @@
 /*!
-** Generate a color palette starting from a base color.
+** Generate a color palette by declining a base color.
 ** https://github.com/ranbureand/colors
 ** Licensed MIT © 2017 Andrea Buran [www.andreaburan.com].
 */
 
-var baseColor = [0, 170, 255]; // define the base color in RGB code
+var baseColor = [0, 170, 255]; // define the base color [RGB code]
 
-var hueIterations = 12, // define the number of hue iterations of the palette
-    lightnessIterations = 12; // define the number of lightness iterations of the palette
+var hueIterations = 32, // define the number of hue iterations of the palette
+    lightnessIterations = 4; // define the number of lightness iterations of the palette
 
 var hueIncrement = 360/hueIterations, 
     lightnessIncrement = 4;
@@ -35,8 +35,8 @@ function palette(r, g, b) {
           s = hsluv[1], // shift the saturation of the base color
           l = hsluv[2] + k*lightnessIncrement; // shift the lightness of the base color
 
-      var rgb = window.hsluv.hsluvToRgb([h, s, l]), // conver the new color from HSLuv code to RGB code
-          hex = window.hsluv.hsluvToHex([h, s, l]); // conver the new color from HSLuv code to HEX code
+      var rgb = window.hsluv.hsluvToRgb([h, s, l]), // convert the new color from HSLuv code to RGB code
+          hex = window.hsluv.hsluvToHex([h, s, l]); // convert the new color from HSLuv code to HEX code
 
       // generate the swatch of the new color
       var swatch = document.createElement('a');
