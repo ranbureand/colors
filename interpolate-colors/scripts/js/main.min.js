@@ -4,7 +4,7 @@
 ** Licensed MIT © 2017 Andrea Buran [www.andreaburan.com].
 */
 
-var startColor = [30, 100, 80], // define the start color [HSLuv code]
+var startColor = [100, 100, 80], // define the start color [HSLuv code]
     endColor = [320, 20, 20]; // define the end color [HSLuv code]
 
 var interpolations = 10; // define the number of interpolations between the start color and end color

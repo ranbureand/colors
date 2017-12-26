@@ -6,14 +6,16 @@
 
 var baseColor = [0, 170, 255]; // define the base color [RGB code]
 
-var hueIterations = 32, // define the number of hue iterations of the palette
+var hueIterations = 12, // define the number of hue iterations of the palette
     lightnessIterations = 4; // define the number of lightness iterations of the palette
 
 var hueIncrement = 360/hueIterations, 
     lightnessIncrement = 4;
 
+var palette = document.getElementsByClassName('palette');
+
 // define the function to generate the palette
-function palette(r, g, b) {
+function decline(r, g, b) {
   // convert the base color from RGB code to HSLuv code
   var hsluv = window.hsluv.rgbToHsluv([r/255, g/255, b/255]);
 
@@ -24,8 +26,7 @@ function palette(r, g, b) {
     // generate a swatch column
     var swatches = document.createElement('div');
     swatches.setAttribute('class', 'swatches');
-    swatches.setAttribute('style', 'width: ' + 100/hueIterations + '%;');
-    document.body.appendChild(swatches);
+    palette[0].appendChild(swatches);
 
     // generate the swatches in a swatch column
     for(var k = -lightnessIterations; k < lightnessIterations-1; k++) {
@@ -43,14 +44,14 @@ function palette(r, g, b) {
       swatch.setAttribute('class', 'swatch');
       swatch.setAttribute('data-clipboard-text', hex);
       swatch.setAttribute('href', hex);
-      swatch.setAttribute('style', 'background-color: ' + hex + '; height: ' + 100/(lightnessIterations*2-1) + '%;');
+      swatch.setAttribute('style', 'background-color: ' + hex + ';');
       swatches.appendChild(swatch);
     }
   }
 }
 
 // generate the palette
-palette(baseColor[0], baseColor[1], baseColor[2]);
+decline(baseColor[0], baseColor[1], baseColor[2]);
 
 // copy the HEX code of a color on press
 var hexes = document.querySelectorAll('a'),
