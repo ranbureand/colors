@@ -9,7 +9,8 @@ var baseColor = [0, 170, 255]; // define the base color [RGB code]
 var hueIterations = 12, // define the number of hue iterations of the palette
     lightnessIterations = 4; // define the number of lightness iterations of the palette
 
-var hueIncrement = 360/hueIterations, 
+var hueIncrement = 360/hueIterations,
+    saturationIncrement = 0,
     lightnessIncrement = 4;
 
 var palette = document.getElementsByClassName('palette');
@@ -33,7 +34,7 @@ function decline(r, g, b) {
 
       // generate the new color
       var h = hsluv[0] + i*(hueIncrement), // shift the hue of the base color
-          s = hsluv[1], // shift the saturation of the base color
+          s = hsluv[1] + k*saturationIncrement, // shift the saturation of the base color
           l = hsluv[2] + k*lightnessIncrement; // shift the lightness of the base color
 
       var rgb = window.hsluv.hsluvToRgb([h, s, l]), // convert the new color from HSLuv code to RGB code
