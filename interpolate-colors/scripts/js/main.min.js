@@ -5,7 +5,11 @@
 */
 
 var startColor = [20, 80, 60], // define the start color [HSLuv code]
-    endColor = [[60, 80, 80], [startColor[0], 100, 100], [startColor[0], 0, 0]]; // define the end color [HSLuv code]
+    endColor = [
+      [60, 80, 80],
+      [startColor[0], 100, 100],
+      [startColor[0], 0, 0]
+    ]; // define the end color [HSLuv code]
 
 var interpolations = 12; // define the number of interpolations between the start color and end color
 
@@ -49,8 +53,6 @@ for(var i = 0; i < 3; i++) {
     swatches.appendChild(swatch);
   }
 }
-
-
 
 // copy the HEX code of a color on press
 var hexes = document.querySelectorAll('a'),
