@@ -4,7 +4,7 @@
 ** Licensed MIT © 2017 Andrea Buran [www.andreaburan.com].
 */
 
-var baseColor = [0, 170, 255]; // define the base color [RGB code]
+var baseColor = [239, 101, 64]; // define the base color [RGB code]
 
 var hueIterations = 12, // define the number of hue iterations of the palette
     lightnessIterations = 4; // define the number of lightness iterations of the palette
@@ -30,7 +30,7 @@ function decline(r, g, b) {
     palette[0].appendChild(swatches);
 
     // generate the swatches in a swatch column
-    for(var k = -lightnessIterations; k < lightnessIterations-1; k++) {
+    for(var k = -lightnessIterations+1; k < lightnessIterations; k++) {
 
       // generate the new color
       var h = hsluv[0] + i*(hueIncrement), // shift the hue of the base color
