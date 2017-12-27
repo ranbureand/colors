@@ -14,11 +14,13 @@ function lerp (start, end, amount){
   return (1 - amount) * start + amount * end;
 }
 
+var palette = document.getElementsByClassName('palette');
+
 // generate a swatch column
 var swatches = document.createElement('div');
 swatches.setAttribute('class', 'swatches');
 swatches.setAttribute('style', 'width: ' + 100 + '%;');
-document.body.appendChild(swatches);
+palette[0].appendChild(swatches);
 
 // generate the swatches in the swatch column
 for(var i = 0; i < interpolations; i++) {
@@ -42,7 +44,7 @@ for(var i = 0; i < interpolations; i++) {
   swatch.setAttribute('data-rgb', rgb);
   swatch.setAttribute('data-hex', hex);
   swatch.setAttribute('href', hex);
-  swatch.setAttribute('style', 'background-color: ' + hex + '; height: ' + 100/interpolations + '%;');
+  swatch.setAttribute('style', 'background-color: ' + hex + ';');
   swatches.appendChild(swatch);
 }
 
