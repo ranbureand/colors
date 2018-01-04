@@ -1,38 +1,72 @@
+/*
+** Colors
+** 0 1 | 2 3 | 4 5 | 6 7 | 8 9 | a b | c d | e f
+*/
+/*
+** Typography
+*/
+/*
+** Backgrounds
+*/
+html {
+  font-family: 'Roboto Mono', 'Andale Mono', 'Monaco', monospace; }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 html,
 body {
   width: 100%;
   height: 100%;
-
-  background-color: #222;
-}
+  background-color: #222; }
 
 .palette {
   display: flex;
   flex-direction: row;
-
   width: 100%;
-  height: 100%;
-  padding: 8px;
-
-  flex-wrap: nowrap;
-}
+  height: calc(100% - 48px);
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  flex-wrap: nowrap; }
 
 .swatches {
   display: flex;
   flex-direction: column;
-
   height: 100%;
-
-  flex: 1 1 auto;
-}
+  flex: 1 1 auto; }
 
 .swatch {
-  flex: 1 1 auto;
-}
+  flex: 1 1 auto; }
+
+.codes {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  color: #fff; }
+  .codes ul {
+    display: flex;
+    flex-direction: row;
+    padding-right: 24px;
+    list-style-type: none; }
+    .codes ul li {
+      padding-right: 24px; }
+
+[class*='value'] {
+  color: rgba(255, 255, 255, 0.8); }
+
+[class*='values'] {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 24px;
+  padding-left: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: copy; }
+  [class*='values']:hover, [class*='values']:focus {
+    background-color: red; }
+  [class*='values']:active {
+    background-color: yellow; }

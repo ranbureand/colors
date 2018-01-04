@@ -4,9 +4,9 @@
 ** Licensed MIT © 2017 Andrea Buran [www.andreaburan.com].
 */
 
-var baseColor = [239, 101, 64]; // define the base color [RGB code]
+var baseColor = [140, 80, 50]; // define the base color [HSLuv code]
 
-var hueIterations = 12, // define the number of hue iterations of the palette
+var hueIterations = 18, // define the number of hue iterations of the palette
     lightnessIterations = 4; // define the number of lightness iterations of the palette
 
 var hueIncrement = 360/hueIterations,
@@ -16,9 +16,9 @@ var hueIncrement = 360/hueIterations,
 var palette = document.getElementsByClassName('palette');
 
 // define the function to generate the palette
-function decline(r, g, b) {
+function decline(h, s, l) {
   // convert the base color from RGB code to HSLuv code
-  var hsluv = window.hsluv.rgbToHsluv([r/255, g/255, b/255]);
+  var hsluv = [h, s, l];
 
   lightnessIterations = lightnessIterations + 1;
 
