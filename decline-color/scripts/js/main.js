@@ -4,10 +4,10 @@
 ** Licensed MIT © 2017 Andrea Buran [www.andreaburan.com].
 */
 
-var baseColor = [140, 80, 50]; // define the base color [HSLuv code]
+var baseColor = [261, 97, 50]; // define the base color [HSLuv code]
 
-var hueIterations = 18, // define the number of hue iterations of the palette
-    lightnessIterations = 4; // define the number of lightness iterations of the palette
+var hueIterations = 36, // define the number of hue iterations of the palette
+    lightnessIterations = 8; // define the number of lightness iterations of the palette
 
 var hueIncrement = 360/hueIterations,
     saturationIncrement = 0,

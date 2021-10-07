@@ -175,7 +175,7 @@ function defineCodes() {
 
 //translateHSL(20, 80, 60);
 //translateRGB(239, 101, 64);
-translateHEX('#FAFAD1');
+translateHEX('#376BFB');
 defineCodes();
 
 // copy the HEX code of a color on press

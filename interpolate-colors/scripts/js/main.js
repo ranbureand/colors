@@ -4,11 +4,11 @@
 ** Licensed MIT © 2017 Andrea Buran [www.andreaburan.com].
 */
 
-var startColor = [20, 80, 60], // define the start color [HSLuv code]
+var startColor = [261, 97, 50], // define the start color [HSLuv code]
     endColor = [
-      [60, 80, 80],
-      [startColor[0], 100, 100],
-      [startColor[0], 0, 0]
+      [261, 74, 17],
+      [startColor[0], 92, 88],
+      [startColor[0], 92, 8]
     ]; // define the end color [HSLuv code]
 
 var interpolations = 12; // define the number of interpolations between the start color and end color
